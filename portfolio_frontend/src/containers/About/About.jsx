@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import './About.scss';
 
 import AppWrap from '../../wrapper/AppWrap';
+import { MotionWrap } from '../../wrapper';
 
 // import { images } from '../../constants';
 import { urlFor, client } from '../../client';
@@ -52,4 +53,8 @@ const [abouts, setAbouts] = useState([]);
   )
 }
 
-export default AppWrap(About, 'about');
+export default AppWrap(
+  MotionWrap(About, 'app__about'),
+  'about',
+  'app__whitebg',
+);
